@@ -42,3 +42,21 @@ if (meeste punten < 5) {nieuwe ronden}
 esle bericht winnaar, en geef optie voor nieuw spel. 
 
 */
+
+
+
+//functie voor het maken van de computer's keuze
+let randomChoice = Math.floor((Math.random() * 3));
+
+function getComputerChoice(randomChoice) {
+        if (randomChoice === 0) {
+                return "Rock";
+        } 
+        else if(randomChoice === 1) {
+                return "Paper";
+        }
+        else if (randomChoice === 2) {
+                return "Scissors";
+        }
+}
+console.log(getComputerChoice(randomChoice));
