@@ -45,55 +45,52 @@ esle bericht winnaar, en geef optie voor nieuw spel.
 
 //get user input 
 
-let playerSelection = "rock";
-playerSelection = playerSelection.toLocaleLowerCase();
-
-
-
-
 function playRound(playerSelection, computerSelection) {
         switch (playerSelection, computerSelection){
                 case (playerSelection === 'rock' && computerSelection === 'rock'):
                         return 'Its a tie! You both picked rock, seems like you\'re both rock-solid.';
-                        break;
                 case (playerSelection === 'rock' && computerSelection === 'paper'):
                         return 'You lose! A rock ain\'t always a hard place, sometimes paper can cover it!';
-                        break;
                 case (playerSelection === 'rock' && computerSelection === 'scissors'):
                         return 'You win! Rock and roll baby!';
-                        break;
                 case (playerSelection === 'paper' && computerSelection === 'rock'):
                         return 'You win! Looks like the computer just got schooled, paper always wins.';
-                        break;
                 case (playerSelection === 'paper' && computerSelection === 'paper'):
                         return 'It\'s a tie! You both picked paper, but let\'s be real, paper is the best choice anyway.';
-                        break;
                 case (playerSelection === 'paper' && computerSelection === 'scissors'):
                         return 'You lose! Looks like paper just met its mortal enemy, scissors always wins!';
-                        break;
                 case (playerSelection === 'scissors' && computerSelection === 'rock'):
                         return 'You lose! But I bet the rock band next door is loving this!';
-                        break;
                 case (playerSelection === 'scissors' && computerSelection === 'paper'):
                         return 'You win! Looks like the computer got cut down to size!';
-                        break;
                 case (playerSelection === 'scissors' && computerSelection === 'scissors'):
                         return 'It\'s a tie! You both picked scissorts, seems like you both have a sharp mind and cutting edge strategy!';
-                        break;
+                default:
+                        return 'Invalid selection';
 }}
+
+//playround is undefined, check hoe maak je default value switch
+
 
 
 //functie voor het maken van de computer's keuze
 let randomChoice = Math.floor((Math.random() * 3));
 
-function getComputerChoice(randomChoice) {
+function getComputerChoice() {
         if (randomChoice === 0) {
                 return "rock";
         } 
         else if(randomChoice === 1) {
                 return "paper";
         }
-        else if (randomChoice === 2) {
+        else {
                 return "scissors";
         }
 }
+
+
+let playerSelection = "rock";
+playerSelection = playerSelection.toLocaleLowerCase();
+let computerSelection = getComputerChoice(randomChoice);
+
+console.log(playRound(playerSelection, computerSelection));
