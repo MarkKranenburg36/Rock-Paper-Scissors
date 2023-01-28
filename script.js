@@ -46,48 +46,24 @@ esle bericht winnaar, en geef optie voor nieuw spel.
 //get user input 
 
 function playRound(playerSelection, computerSelection) {
-        let result;
-        if (playerSelection === 'rock' && computerSelection === 'rock') {
-             resul   'Its a tie! You both picked rock, seems like you\'re both rock-solid.'}
-        if else (playerSelection === 'rock' && computerSelection === 'paper'):
-                        return 'You lose! A rock ain\'t always a hard place, sometimes paper can cover it!';
-        if else (playerSelection === 'rock' && computerSelection === 'scissors'):
-                        return 'You win! Rock and roll baby!';
-        if else (playerSelection === 'paper' && computerSelection === 'rock'):
-                return 'You win! Looks like the computer just got schooled, paper always wins.';
-        if else (playerSelection === 'paper' && computerSelection === 'paper'):
-                        return 'It\'s a tie! You both picked paper, but let\'s be real, paper is the best choice anyway.';
-        if else (playerSelection === 'paper' && computerSelection === 'scissors'):
-                        return 'You lose! Looks like paper just met its mortal enemy, scissors always wins!';
-        if else (playerSelection === 'scissors' && computerSelection === 'rock'):
-                        return 'You lose! But I bet the rock band next door is loving this!';
-        if else (playerSelection === 'scissors' && computerSelection === 'paper'):
-                        return 'You win! Looks like the computer got cut down to size!';
-        else    (playerSelection === 'scissors' && computerSelection === 'scissors'):
-                        return 'It\'s a tie! You both picked scissorts, seems like you both have a sharp mind and cutting edge strategy!';
-        default:
-                        return 'Invalid selection';
-}
-
-function playRound(playerSelection, computerSelection) {
         if (playerSelection === 'rock' && computerSelection === 'rock')
-         statement1
+         result = 'Its a tie! You both picked rock, seems like you\'re both rock-solid.';
         else if (playerSelection === 'rock' && computerSelection === 'paper')
-        statement2
+        result = 'You lose! A rock ain\'t always a hard place, sometimes paper can cover it!';
         else if (playerSelection === 'rock' && computerSelection === 'scissors')
-         statement3
+        result = 'You win! Rock and roll baby!';
         else if (playerSelection === 'paper' && computerSelection === 'rock')
-         statement2
+        result = 'You win! Looks like the computer just got schooled, paper always wins.';
         else if (playerSelection === 'paper' && computerSelection === 'paper')
-        statement2
+        result = 'It\'s a tie! You both picked paper, but let\'s be real, paper is the best choice anyway.';
         else if (playerSelection === 'paper' && computerSelection === 'scissors')
-        statement2
+        result = 'You lose! Looks like paper just met its mortal enemy, scissors always wins!';
         else if (playerSelection === 'scissors' && computerSelection === 'rock')
-        statement2
+        result = 'You lose! But I bet the rock band next door is loving this!';
         else if (playerSelection === 'scissors' && computerSelection === 'paper')
-        statement2
+        result = 'You win! Looks like the computer got cut down to size!';
         else
-         statementN
+        result = 'It\'s a tie! You both picked scissorts, seems like you both have a sharp mind and cutting edge strategy!........defealt';
 }
 
 
@@ -111,3 +87,6 @@ function getComputerChoice() {
 let playerSelection = 'rock';
 playerSelection = playerSelection.toLocaleLowerCase();
 let computerSelection = getComputerChoice(randomChoice);
+
+playRound(playerSelection, computerSelection);
+console.log(result);
