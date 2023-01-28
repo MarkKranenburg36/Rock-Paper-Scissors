@@ -69,7 +69,8 @@ function playRound(playerSelection, computerSelection) {
 
 
 //functie voor het maken van de computer's keuze
-let randomChoice = Math.floor((Math.random() * 3));
+let randomChoice;
+randomChoice = Math.floor((Math.random() * 3));
 
 function getComputerChoice() {
         if (randomChoice === 0) {
@@ -84,9 +85,19 @@ function getComputerChoice() {
 }
 
 
-let playerSelection = 'rock';
-playerSelection = playerSelection.toLocaleLowerCase();
-let computerSelection = getComputerChoice(randomChoice);
+let playerSelection;
+let computerSelection;
+computerSelection = getComputerChoice(randomChoice);
 
-playRound(playerSelection, computerSelection);
-console.log(result);
+game(playRound(playerSelection, computerSelection));
+
+function game() {
+        for (let i=0; i <=4; i++) {
+                randomChoice = Math.floor((Math.random() * 3));
+                computerSelection = getComputerChoice(randomChoice);
+                playerSelection = prompt("Choose rock, paper or scissors!");
+                playerSelection = playerSelection.toLocaleLowerCase();
+                playRound(playerSelection, computerSelection);
+                console.log(result);
+        }
+}
