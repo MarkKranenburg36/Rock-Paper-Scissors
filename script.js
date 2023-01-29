@@ -70,7 +70,6 @@ function playRound(playerSelection, computerSelection) {
 
 //functie voor het maken van de computer's keuze
 let randomChoice;
-randomChoice = Math.floor((Math.random() * 3));
 
 function getComputerChoice() {
         if (randomChoice === 0) {
@@ -87,7 +86,6 @@ function getComputerChoice() {
 
 let playerSelection;
 let computerSelection;
-computerSelection = getComputerChoice(randomChoice);
 
 game(playRound(playerSelection, computerSelection));
 
