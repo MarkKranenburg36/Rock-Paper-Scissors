@@ -45,25 +45,30 @@ esle bericht winnaar, en geef optie voor nieuw spel.
 
 //get user input 
 
+let playerScore = 0;
+let computerScore = 0;
+
 function playRound(playerSelection, computerSelection) {
         if (playerSelection === 'rock' && computerSelection === 'rock')
-         result = 'Its a tie! You both picked rock, seems like you\'re both rock-solid.';
+         return 'Its a tie! You both picked rock, seems like you\'re both rock-solid.';
+                
         else if (playerSelection === 'rock' && computerSelection === 'paper')
-        result = 'You lose! A rock ain\'t always a hard place, sometimes paper can cover it!';
+        return 'You lose! A rock ain\'t always a hard place, sometimes paper can cover it!';
+                playerScore++;
         else if (playerSelection === 'rock' && computerSelection === 'scissors')
-        result = 'You win! Rock and roll baby!';
+        return 'You win! Rock and roll baby!';
         else if (playerSelection === 'paper' && computerSelection === 'rock')
-        result = 'You win! Looks like the computer just got schooled, paper always wins.';
+        return 'You win! Looks like the computer just got schooled, paper always wins.';
         else if (playerSelection === 'paper' && computerSelection === 'paper')
-        result = 'It\'s a tie! You both picked paper, but let\'s be real, paper is the best choice anyway.';
+        return 'It\'s a tie! You both picked paper, but let\'s be real, paper is the best choice anyway.';
         else if (playerSelection === 'paper' && computerSelection === 'scissors')
-        result = 'You lose! Looks like paper just met its mortal enemy, scissors always wins!';
+        return 'You lose! Looks like paper just met its mortal enemy, scissors always wins!';
         else if (playerSelection === 'scissors' && computerSelection === 'rock')
-        result = 'You lose! But I bet the rock band next door is loving this!';
+        return 'You lose! But I bet the rock band next door is loving this!';
         else if (playerSelection === 'scissors' && computerSelection === 'paper')
-        result = 'You win! Looks like the computer got cut down to size!';
+        return 'You win! Looks like the computer got cut down to size!';
         else
-        result = 'It\'s a tie! You both picked scissorts, seems like you both have a sharp mind and cutting edge strategy!........defealt';
+        return 'It\'s a tie! You both picked scissorts, seems like you both have a sharp mind and cutting edge strategy!........defealt';
 }
 
 
@@ -87,7 +92,6 @@ function getComputerChoice() {
 let playerSelection;
 let computerSelection;
 
-game(playRound(playerSelection, computerSelection));
 
 function game() {
         for (let i=0; i <=4; i++) {
@@ -96,6 +100,10 @@ function game() {
                 playerSelection = prompt("Choose rock, paper or scissors!");
                 playerSelection = playerSelection.toLocaleLowerCase();
                 playRound(playerSelection, computerSelection);
-                console.log(result);
         }
+
+        // if playerscore > computerscore player wins
+
 }
+
+game(playRound(playerSelection, computerSelection));
