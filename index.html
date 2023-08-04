@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-  <body>
-    <main>
-      <h1>Play Rock Paper Scissors!</h1>
-        <p>Choose between Rock, Paper or Scissorts.</p>
-        <br>
-        <br>
-        <button id="btn-rock">Rock</button>
-        <button id="btn-paper">Paper</button>
-        <button id="btn-scissors">Scissors</button>
-      </main>
-  <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+    <div class="scoreboard">
+      <span class="player-score" id="teamAScore">0</span>
+      <span class="vs">VS</span>
+      <span class="computer-score" id="teamBScore">0</span>
+    </div>
+  </header>
+  <main>
+
+    <div class="choices">
+      <button id="btn-rock">Rock</button>
+      <button id="btn-paper">Paper</button>
+      <button id="btn-scissors">Scissors</button>
+    </div>
+
+    <div class="result-container">
+      <p class="result-text winStyle" id="winOrLoseP"></p>
+      <p class="result-msg" id="resultmsg"></p>
+      <p class="player-picks" id="playerAndComputerPicks"></p>
+    </div>
+
+    <div id="winEndGameModal" class="modal">
+      <div class="modal-content winModel">
+        <span id="closeW" class="close">&times;</span>
+        <h2>You win!</h2>
+        <img class="imgModal" src="./imgs/istockphoto-655254230-612x612.jpg" alt="winning cup">
+        <button id="btn-newGameWin"><b>New Game</b></button>
+      </div>
+    </div>
+
+    <div id="loseEndGameModal" class="modal">
+      <div class="modal-content loseModel">
+        <span id="closeL" class="close">&times;</span>
+        <h2>You lost!</h2>
+        <img class="imgModal" src="./imgs/game-over-glitch-emoji-vector-39999982.jpg" alt="game over">
+        <button id="btn-newGameLose"><b>New Game</b></button>
+      </div>
+    </div>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
 </html>
