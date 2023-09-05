@@ -71,6 +71,12 @@ body {
   #containerResult {
     width: 80vw;
     height: 40vh;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  #containerResult.active {
+    opacity: 1;
   }
 
   .winStyle {

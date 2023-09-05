@@ -125,6 +125,7 @@ function addWinerOrLoserStyle(){
 }
 
 function displayResults(){
+        containerResult.classList.add('active');
         addWinerOrLoserStyle();
         containerResult.appendChild(winOrLoseP);
         playerAndComputerPicks.innerText = `\nYou chose: ${playerChoice} \nComputer chose: ${computerChoice}\n`;
