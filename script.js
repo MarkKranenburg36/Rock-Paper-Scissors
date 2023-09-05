@@ -13,11 +13,8 @@ const scissors = document.querySelector('#btn-scissors');
 const teamAScore = document.querySelector('#teamAScore'); 
 const teamBScore = document.querySelector('#teamBScore');
 //restult display
-const containerResult = document.createElement('div');
-containerResult.id = 'containerResult';
-const winOrLoseP = document.createElement('p');
-winOrLoseP.textContent = '';
-winOrLoseP.id = 'winOrLoseP';
+const containerResult = document.querySelector('#containerResult');
+const winOrLoseP = document.querySelector('#winOrLoseP');
 const resultmsg = document.createElement('p');
 resultmsg.textContent = '';
 const playerAndComputerPicks = document.createElement('p');
@@ -48,7 +45,6 @@ const play = e => {
         playRound(playerChoice, computerChoice);
         displayResults();
         updateScore();
-        console.log(playerChoice);
 }
 
 function playRound(playersPick, computersPick) {
@@ -129,7 +125,6 @@ function addWinerOrLoserStyle(){
 }
 
 function displayResults(){
-        main.appendChild(containerResult);
         addWinerOrLoserStyle();
         containerResult.appendChild(winOrLoseP);
         playerAndComputerPicks.innerText = `\nYou chose: ${playerChoice} \nComputer chose: ${computerChoice}\n`;
