@@ -14,8 +14,10 @@ const teamAScore = document.querySelector('#teamAScore');
 const teamBScore = document.querySelector('#teamBScore');
 //restult display
 const containerResult = document.createElement('div');
+containerResult.id = 'containerResult';
 const winOrLoseP = document.createElement('p');
 winOrLoseP.textContent = '';
+winOrLoseP.id = 'winOrLoseP';
 const resultmsg = document.createElement('p');
 resultmsg.textContent = '';
 const playerAndComputerPicks = document.createElement('p');
