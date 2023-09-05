@@ -41,11 +41,12 @@ let getComputerChoice = () => {
 //puts playersChoice and computersChoice in playRound to decide who wins this round. than call the displayResult function.
 const play = e => {
         winOrLoseP.classList.remove('winStyle', 'loseStyle', 'tieStyle');
-        playerChoice = e.target.textContent;
+        playerChoice = e.target.alt;
         computerChoice = getComputerChoice();
         playRound(playerChoice, computerChoice);
         displayResults();
         updateScore();
+        console.log(playerChoice);
 }
 
 function playRound(playersPick, computersPick) {
